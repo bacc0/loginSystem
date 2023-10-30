@@ -1,6 +1,7 @@
 # User data dictionary to store user details (for simplicity, not recommended for production)
 user_data = {}
-logged_in_user = None  # Variable to track the logged-in user
+# Variable to track the logged-in user
+logged_in_user = None  
 
 # Function to register a new user
 def register_user():
@@ -23,14 +24,17 @@ def register_user():
 
 # Function to log in a user
 def login_user():
-    global logged_in_user  # Use the global variable to track the logged-in user
+     # Use the global variable to track the logged-in user
+    global logged_in_user 
+
     while True:
         try:
             username = input("Enter your username: ")
             password = input("Enter your password: ")
 
             if username in user_data and user_data[username] == password:
-                logged_in_user = username  # Set the logged-in user
+                # Set the logged-in user
+                logged_in_user = username  
                 print("\n...............................\n" +
                       "Login successful. Welcome, " + username + "!\n" +
                       "...............................\n"
@@ -46,13 +50,14 @@ def login_user():
 
 # Function to log out a user
 def logout_user():
-    global logged_in_user  # Use the global variable to track the logged-in user
+    # Use the global variable to track the logged-in user
+    global logged_in_user  
     if logged_in_user is not None:
         print("\n...........................................")
         print(f"You are logged out, {logged_in_user}.✋🏻")
         print("...........................................")
-
-        logged_in_user = None  # Reset the logged-in user
+        # Reset the logged-in user
+        logged_in_user = None  
     else:
         print("You are not logged in.\n")
 
