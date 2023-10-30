@@ -18,15 +18,22 @@ def login_user():
     if username in user_data and user_data[username] == password:
         print("Login successful. Welcome, " + username + "!")
     else:
+        print("\n * * * * * * * * * * * * * * * * * * * * *  * * * ")
+     
         print("Invalid username or password. Please try again.")
+        print(" * * * * * * * * * * * * * * * * * * * * *  * * *\n ")
 
 # Main program
 while True:
+    print("-------------------------------")
     print("User Registration and Login System")
+    print("-------------------------------")
     print("1. Register")
     print("2. Login")
     print("3. Exit")
-    choice = input("Select an option (1/2/3): ")
+    print("-------------------------------")
+    choice = input("Select an option (1, 2, 3): ")
+
 
     if choice == '1':
         register_user()
@@ -36,4 +43,6 @@ while True:
         print("Goodbye!")
         break
     else:
+        print(" * * * * * * * * * * * * * * * * * * * * * ")
         print("Invalid choice. Please select 1, 2, or 3.")
+        print(" * * * * * * * * * * * * * * * * * * * * * ")
